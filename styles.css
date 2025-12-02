@@ -1,0 +1,346 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+:root{
+    /* custom colors */
+    --darkBrown: #1a1417;
+    --wood: #67413a;
+    --orange: #af4b3b;
+    --golden: #c18549;
+    --green: #8db35e;
+    --gray: #7c8381;
+    --blue: #384d64; 
+
+    background-color: #d9cbae;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%237c8381' fill-opacity='0.33' fill-rule='evenodd'/%3E%3C/svg%3E");
+    
+    /*Fonts*/
+    --Kings: "Kings", cursive;
+    --Poiret: "Poiret One", sans-serif;
+}
+
+body{
+    width: 1440px;
+    max-width: 1440px;
+    font:var(--Kings);
+    margin-left: auto;
+    margin-right: auto;
+}
+body >img{
+    display: inline-flex;
+    top:0;
+    z-index: 0;
+    position: absolute;
+    flex-direction: column;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+header{
+    position: relative;
+    text-align: center;
+    top:0;
+
+}
+
+h1, h2, h3{
+    font-family: var(--Kings);
+    font-weight: 400;
+    font-style: normal;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+header h1{
+    font-size: 100px;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    color: var(--golden);
+    text-shadow: 2px 2px 4px var(--darkBrown);
+    z-index: 1;
+}
+h1 a{
+    font-size: 100px;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    color: var(--golden);
+    text-shadow: 2px 2px 4px var(--darkBrown);
+    z-index: 1;
+    text-decoration: none;
+}
+h1 a:visited{
+    font-size: 100px;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    color: var(--golden);
+    text-shadow: 2px 2px 4px var(--darkBrown);
+    z-index: 1;
+    text-decoration: none;
+    
+}
+nav{
+    margin-left:auto;
+    margin-right:auto;
+    z-index: 1;
+    display: inline;
+}
+nav ul{
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-family: var(--Poiret);
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--wood);  
+
+}
+
+nav a{
+    color:var(--wood);
+}
+nav a:hover{
+    color:var(--golden);
+    text-shadow: 1px 1px 2px var(--wood);
+    text-decoration: underline wavy var(--orange);
+    font-size:30px;
+}
+
+nav a:visited{
+    color:var(--blue);
+}
+
+
+h2{
+    font-size: 70px;
+    text-align: center;
+}
+h3{
+    font-size: 35px;
+    text-align: center;
+    color:var(--darkBrown);
+    text-shadow: 1px 2px var(--blue);    
+
+}
+
+#mainHome{
+    position: relative;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    z-index: 0;
+    row-gap: 30px;
+    margin-top: 500px;
+    color: var(--darkBrown);
+    
+} 
+
+#mainHome>h2{
+    color:var(--darkBrown);
+    text-shadow: 1px 2px var(--blue);
+
+    
+}
+#mainHome>h2, #mainHome>p{
+    grid-column-start: span 2;
+    align-self:end;
+
+}
+
+#mainHome p{
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    font-family: var(--Poiret);
+    font-size: 20pt;
+    font-weight: bolder;
+    width: 40ch;
+}
+
+#content1, #content2{
+
+    display:inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-count: 2;
+    justify-self: center;
+    justify-items: center;
+
+}
+
+
+#content1>p, #content2>p{
+    font-family: var(--Poiret);
+    font-size: 15pt;
+    font-weight: bolder;
+    width: 40ch;
+    padding-top:20px;
+
+}
+
+#content1>img, #content2>img{
+    margin-top:75px;
+    padding-bottom: 30px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#contactMain>h2{
+    color:var(--darkBrown);
+    text-shadow: 1px 2px var(--blue);
+}
+
+#contactMain{
+    grid-template-columns: 1fr;
+    position: relative;
+    display:grid;
+    grid-template-rows: 10% 10% 1fr;
+    z-index: 0;
+    row-gap: 10px;
+    margin-top: 400px;
+    color: var(--darkBrown);
+    align-items: center;
+    justify-content: center;
+}
+
+#contactMain p{
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    font-family: var(--Poiret);
+    font-size: 20pt;
+    font-weight: bolder;
+    width: 40ch;
+}
+
+#contactMain>img{
+    justify-content: center;
+    margin-left: auto;
+    margin-right:auto;
+    padding-bottom: 120px;
+
+}
+
+#span{
+    color: var(--orange);
+}
+
+form{
+    font-family: var(--Poiret);
+    font-size: 20pt;
+    font-weight: bolder;
+    width: 40ch;
+    text-align: center;
+    display:inline-flex;
+    width: 40%;
+    gap:20px;
+    justify-self: center;
+    justify-content: center;
+    flex-flow: column;
+    flex-wrap: wrap;
+    align-self: center;
+    align-items: center;
+    height: 300px;
+    width:800px;
+    border: 5px solid var(--darkBrown);
+}
+form>input, form > textarea{
+    background-color: var(--gray);
+    border-style: double;
+    border-color: var(--blue);
+}
+input:focus, select:focus, textarea:focus{
+    outline: 3px solid var(--green);
+}
+form>textarea{
+    gap:0;
+    top:0;
+    height:60px;
+    resize:none;
+    width:20em;
+
+
+}
+form>input[type=submit]{
+    width:15em;
+    background-color: var(--blue);
+    font-size:15pt;
+    color: var(--golden);
+}
+form>input[type=submit]:hover{
+    background-color: var(--green);
+    color:var(--darkBrown)
+}
+
+fieldset{
+    border: 2px solid var(--blue);
+    border-radius: 3px;
+
+    padding-left: 10px;
+    padding-right:10px;
+}
+.required{
+	color: var(--orange);
+}
+input:focus:invalid, select:focus:invalid, textarea:focus:invalid{
+    outline: 3px solid var(--orange);
+}
+
+footer{
+    margin-top:75px;
+    text-align: center;
+    margin-bottom:10px;
+    font-family: var(--Poiret);
+    font-size: 15pt;
+    font-weight: bolder;
+}
